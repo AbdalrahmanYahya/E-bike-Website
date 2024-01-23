@@ -241,7 +241,9 @@ header .container i:last-child {
     position: relative;
     color: white;
     height: 100vh;
-    background-image: url(../images/bikes/pexels-erik-mclean-12249273.jpg);
+    /* background-image: url(../images/bikes/pexels-erik-mclean-12249273.jpg); */
+    background-image: url(../images/AI/image1.jpg);
+
     background-size: cover;
 
 }
@@ -373,7 +375,82 @@ header .container i:last-child {
     top: 1px;
 }
 /* End Design */
-
+/* Start Portfolio */
+.portfolio {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.portfolio .shuffle {
+    display: flex;
+    justify-content: center;
+}
+.portfolio .shuffle li {
+    padding: 10px;
+}
+.portfolio .shuffle li.active {
+    background-color: var(--main-color);
+    color: white;
+}
+.portfolio .imgs-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.portfolio .imgs-container .box {
+    position: relative;
+    overflow: hidden;
+}
+@media (min-width: 768px) {
+    .portfolio .imgs-container .box {
+        flex-basis: 50%;
+    }
+}
+@media (min-width: 1199px) {
+    .portfolio .imgs-container .box {
+        flex-basis: 25%;
+    }
+}
+.portfolio .imgs-container .box img {
+    max-width: 100%;
+    transition: 0.3s;
+}
+.portfolio .imgs-container .box .caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    background-color: white;
+    transition: 0.3s;
+    bottom: -100%;
+    visibility: hidden;
+    width: 100%;
+}
+.portfolio .imgs-container .box:hover .caption {
+    bottom: 0;
+    width: 100%;
+    visibility: visible;
+}
+.portfolio .imgs-container .box:hover img {
+    transform: rotate(4deg) scale(1.1);
+}
+.portfolio .imgs-container .box .caption h4 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.portfolio .imgs-container .box .caption p {
+    color: var(--main-color);
+}
+.portfolio a.more {
+    width: fit-content;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    background-color: var(--main-color);
+    display: block;
+    margin: 30px auto;
+}
+/* End Portfolio */
 /* Start Video */
 .video {
     position: relative;
